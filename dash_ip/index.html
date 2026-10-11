@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>IPsec Sentinel — Network Security Intelligence</title>
+<!-- Offline-first interface: local assets only; no external fonts or libraries. -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient ambient-one" aria-hidden="true"></div>
+<div class="ambient ambient-two" aria-hidden="true"></div>
+<header class="topbar">
+  <a class="brand" href="#top" aria-label="IPsec Sentinel home">
+    <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span class="brand-copy"><strong>IPsec<span> Sentinel</span></strong><small>NETWORK SECURITY INTELLIGENCE</small></span>
+  </a>
+  <div class="topbar-meta">
+    <span class="live-indicator"><i></i> LOCAL ANALYSIS</span>
+    <span class="build" id="build">checking service…</span>
+    <span class="build source-label" id="source"></span>
+  </div>
+</header>
+<main id="top">
+  <section class="intro" aria-labelledby="page-title">
+    <div class="intro-copy">
+      <p class="eyebrow"><span class="eyebrow-line"></span> IPSEC POSTURE · TRAFFIC INTELLIGENCE</p>
+      <h1 id="page-title">See what’s happening<br><span>inside your tunnels.</span></h1>
+      <p class="intro-text">Turn packet captures into a clear view of your IPsec estate, security findings, and next steps.</p>
+      <div class="intro-points"><span><b>01</b> Inspect negotiations</span><span><b>02</b> Surface exposure</span><span><b>03</b> Plan remediation</span></div>
+    </div>
+    <div class="intro-art" aria-hidden="true">
+      <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+      <div class="art-core"><div class="core-shield"><svg viewBox="0 0 64 72" role="presentation"><path d="M32 4 54 13v18c0 16-9 27-22 36C19 58 10 47 10 31V13L32 4Z"/><path d="m22 35 7 7 14-16"/></svg></div><span>SECURE<br>BY DESIGN</span></div>
+      <span class="art-node node-a">IKE</span><span class="art-node node-b">ESP</span><span class="art-node node-c">PQC</span>
+    </div>
+  </section>
+
+  <section id="upload" class="upload-layout" aria-label="Packet capture analysis">
+    <div class="upload-panel">
+      <div class="panel-heading"><div><p class="eyebrow">START AN ANALYSIS</p><h2>Bring your capture.</h2></div><span class="step-chip">STEP <b>01</b></span></div>
+      <div id="drop" class="drop-zone">
+        <div class="upload-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 31V7m0 0-9 9m9-9 9 9"/><path d="M10 27v11a3 3 0 0 0 3 3h22a3 3 0 0 0 3-3V27"/></svg></div>
+        <p class="drop-title"><strong>Drop a capture here</strong></p>
+        <p class="drop-subtitle">or browse files from your device</p>
+        <label class="file-button" for="file">Choose capture <span aria-hidden="true">↗</span></label>
+        <input type="file" id="file" accept=".pcap,.pcapng,.cap">
+        <p class="file-types">PCAP · PCAPNG · CAP</p>
+        <span class="status" id="status" role="status" aria-live="polite"></span>
+      </div>
+      <div class="upload-footer"><span class="tiny-lock" aria-hidden="true">▣</span><span>Analysis begins when you select a file.</span><span class="max-local">LOCAL ONLY</span></div>
+    </div>
+    <aside class="trust-panel">
+      <div class="trust-icon"><svg viewBox="0 0 48 48"><path d="M24 4 40 10v13c0 11-6.5 18-16 23C14.5 41 8 34 8 23V10L24 4Z"/><path d="m17 24 5 5 10-11"/></svg></div>
+      <p class="eyebrow">BUILT FOR SENSITIVE NETWORKS</p>
+      <h3>Your capture stays<br>under your control.</h3>
+      <p>This tool reads the capture and produces documents. It never writes to a network device and stores no credential. Reports are held in memory only.</p>
+      <div class="trust-divider"></div>
+      <div class="trust-facts"><span><i></i> No device changes</span><span><i></i> No credentials stored</span><span><i></i> Offline-first interface</span></div>
+      <span class="trust-watermark" aria-hidden="true">S</span>
+    </aside>
+  </section>
+
+  <nav id="tabs" class="tabs" aria-label="Report sections" hidden>
+    <div class="tabs-label">YOUR REPORT</div>
+    <button data-view="overview" aria-selected="true">Overview</button>
+    <button data-view="inventory" aria-selected="false">Inventory</button>
+    <button data-view="findings" aria-selected="false">Findings</button>
+    <button data-view="exposure" aria-selected="false">Exposure</button>
+    <button data-view="threats" aria-selected="false">Threat matrix</button>
+    <button data-view="pqc" aria-selected="false">Post-quantum</button>
+    <button data-view="remediation" aria-selected="false">Remediation</button>
+  </nav>
+
+  <section id="overview" class="report-section" hidden></section>
+  <section id="inventory" class="report-section" hidden></section>
+  <section id="findings" class="report-section" hidden></section>
+  <section id="exposure" class="report-section" hidden></section>
+  <section id="threats" class="report-section" hidden></section>
+  <section id="pqc" class="report-section" hidden></section>
+  <section id="remediation" class="report-section" hidden></section>
+  <section id="detail" class="report-section" hidden></section>
+  <footer class="page-footer"><span>IPSEC SENTINEL <i>•</i> SECURITY POSTURE, MADE CLEAR</span><span>DESIGNED FOR LOCAL ANALYSIS</span></footer>
+</main>
+<script src="/app.js" defer></script>
+</body>
+</html>
